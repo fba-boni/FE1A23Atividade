@@ -4,9 +4,17 @@
   padding: 0;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body h2 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 55px;
+  letter-spacing: 10px;
+}
+
 header {
-  background-color: white;
-  font-family: "Roboto", sans-serif;
+  background-color: #f8f8f8;
   color: black;
   display: flex;
   justify-content: space-around;
@@ -34,8 +42,7 @@ header .menu li {
 }
 
 main {
-  background-color: white;
-  font-family: "Roboto", sans-serif;
+  background-color: #f8f8f8;
   color: black;
   height: 800px;
   display: flex;
@@ -46,21 +53,18 @@ main {
 main .mainLE {
   margin-top: 40px;
   width: 45%;
-}
-main .mainLE h1 {
-  font-size: 4rem;
-  font-weight: 700;
+  height: 150px;
 }
 main .mainLE p {
   line-height: 40px;
   margin: 20px 0px;
 }
 main .mainLE button {
-  border: dashed;
+  border: dashed 1px;
   border-radius: 5px;
   width: 100px;
   height: 50px;
-  background-color: aqua;
+  background-color: #03faee;
   font-size: 1rem;
   font-weight: 500;
 }
@@ -78,11 +82,18 @@ main .cards {
   justify-content: space-around;
 }
 main .cards .card {
-  background-color: rgba(230, 230, 230, 0.9019607843);
+  background-color: #8b8b8b;
   padding: 10px;
   border-radius: 5px;
   width: 30%;
   height: 200px;
+}
+main .cards button {
+  width: 40px;
+  height: 40px;
+  border: solid 1px;
+  border-radius: 50%;
+  box-shadow: 5px 5px #92f7f2 inset;
 }
 
 footer {
@@ -94,6 +105,8 @@ footer {
 footer img {
   width: 30px;
   height: 30px;
+  border-radius: 50%;
+  box-shadow: 5px 5px #92f7f2 inset;
 }
 footer :nth-child(1) {
   flex-grow: 0.9;

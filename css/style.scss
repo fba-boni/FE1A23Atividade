@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "_stylecores.scss";
 
 *{
     margin: 0;
     padding: 0;
 }
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+    h2{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 55px;
+        // height: 70px;
+        letter-spacing: 10px;
+    }
+}
+
 header{
-    background-color: white;
-    font-family: 'Roboto', sans-serif;
+    background-color: $bg-secondary;
+    // font-family: 'Roboto', sans-serif;
     color: black;
     display: flex;
     justify-content: space-around;
@@ -22,6 +34,7 @@ header{
         font-size: 2rem;
         font-weight: 700;        
     }
+    
     .menu{
         font-size: 1.5rem;
         font-weight: 500;
@@ -39,32 +52,33 @@ header{
 }
 
 main{
-    background-color: white;
-    font-family: 'Roboto', sans-serif;
+    background-color: $bg-secondary;
+    // font-family: 'Roboto', sans-serif;
     color: black;
     height: 800px;
     display: flex;
     align-items:flex-start;
-    justify-content: space-around;
+    justify-content:space-around;
     flex-flow: wrap;
 
     .mainLE{
         margin-top: 40px;
         width: 45%;
-        h1{
-            font-size: 4rem;
-            font-weight: 700;
-        }
+        height: 150px;
+        // h2{
+        //     font-size: 3rem;
+        //     font-weight: 400;
+        // }
         p{
             line-height: 40px;
             margin: 20px 0px;
         }
         button{
-            border: dashed;
+            border: dashed 1px;
             border-radius: 5px;
             width: 100px;
             height: 50px;
-            background-color: aqua;
+            background-color: $bg-primary;
             font-size: 1rem;
             font-weight: 500;
         }
@@ -84,11 +98,18 @@ main{
         align-items: center;
         justify-content: space-around;
         .card{            
-            background-color: #e6e6e6e6;
+            background-color: $color-primary;
             padding: 10px;
             border-radius: 5px;
             width: 30%;
             height: 200px;
+        }
+        button{
+            width: 40px;
+            height: 40px;
+            border: solid 1px;
+            border-radius: 50%;
+            box-shadow: 5px 5px $shadow inset;
         }
     }
 }
@@ -100,6 +121,8 @@ footer{
     img{
         width: 30px;
         height: 30px;
+        border-radius: 50%;
+        box-shadow: 5px 5px $shadow inset;
     }
     :nth-child(1){
         flex-grow: .9;
