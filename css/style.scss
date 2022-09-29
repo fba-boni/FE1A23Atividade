@@ -7,13 +7,18 @@
 }
 
 body{
+    overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
 
-    h2{
+    span{
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 55px;
+        font-size: 3.438rem;
         // height: 70px;
-        letter-spacing: 10px;
+        letter-spacing: 0.625rem;
+    }
+    span.highlight{
+        @extend span;
+        background: linear-gradient($bg-primary, $bg-primary) 0 var(--y-pos, 90%) / 100% var(--size, 8px) no-repeat;
     }
 }
 
@@ -25,14 +30,15 @@ header{
     justify-content: space-around;
     align-items: center;
     height: 100px;
-
+    width: 100vw;
     :nth-child(1){
         flex-grow: 0.8;
     }
 
     .logo{
         font-size: 2rem;
-        font-weight: 700;        
+        font-weight: 700;
+        margin-right: 18rem;        
     }
     
     .menu{
@@ -72,6 +78,8 @@ main{
         p{
             line-height: 40px;
             margin: 20px 0px;
+            color: $color-primary;
+            font-family: Arial, Helvetica, sans-serif;
         }
         button{
             border: dashed 1px;
@@ -98,11 +106,19 @@ main{
         align-items: center;
         justify-content: space-around;
         .card{            
-            background-color: $color-primary;
+            background-color: $bg-secondary;
             padding: 10px;
             border-radius: 5px;
             width: 30%;
             height: 200px;
+            h3.highlight2{
+                display: inline;
+                background: linear-gradient($bg-primary, $bg-primary) 0 var(--y-pos, 90%) / 100% var(--size, 8px) no-repeat;
+            }
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                color:$color-primary;
+            }
         }
         button{
             width: 40px;

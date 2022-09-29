@@ -5,12 +5,16 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
 }
-body h2 {
+body span, body span.highlight {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 55px;
-  letter-spacing: 10px;
+  font-size: 3.438rem;
+  letter-spacing: 0.625rem;
+}
+body span.highlight {
+  background: linear-gradient(#03faee, #03faee) 0 var(--y-pos, 90%)/100% var(--size, 8px) no-repeat;
 }
 
 header {
@@ -20,6 +24,7 @@ header {
   justify-content: space-around;
   align-items: center;
   height: 100px;
+  width: 100vw;
 }
 header :nth-child(1) {
   flex-grow: 0.8;
@@ -27,6 +32,7 @@ header :nth-child(1) {
 header .logo {
   font-size: 2rem;
   font-weight: 700;
+  margin-right: 18rem;
 }
 header .menu {
   font-size: 1.5rem;
@@ -58,6 +64,8 @@ main .mainLE {
 main .mainLE p {
   line-height: 40px;
   margin: 20px 0px;
+  color: #8b8b8b;
+  font-family: Arial, Helvetica, sans-serif;
 }
 main .mainLE button {
   border: dashed 1px;
@@ -82,11 +90,19 @@ main .cards {
   justify-content: space-around;
 }
 main .cards .card {
-  background-color: #8b8b8b;
+  background-color: #f8f8f8;
   padding: 10px;
   border-radius: 5px;
   width: 30%;
   height: 200px;
+}
+main .cards .card h3.highlight2 {
+  display: inline;
+  background: linear-gradient(#03faee, #03faee) 0 var(--y-pos, 90%)/100% var(--size, 8px) no-repeat;
+}
+main .cards .card p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8b8b8b;
 }
 main .cards button {
   width: 40px;
